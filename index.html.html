@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a DINAF (Dirección Nacional de Finanzas)</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre DINAF</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#materiales">Materiales</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Esta es la sección de inicio de mi página web.</p>
+<section id="slider">
+    <div class="slider-container">
+        <div class="slide active">
+            <img src="imagen1.png" alt="Imagen 1">
+        </div>
+        <div class="slide">
+            <img src="imagen2.png" alt="Imagen 2">
+        </div>
+        <div class="slide">
+            <img src="imagen3.png" alt="Imagen 3">
+        </div>
+    </div>
+    <div class="slider-controls">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+    </div>
+</section>
+        </section>
+        
+        <section id="sobre">
+            <h2>Sobre DINAF</h2>
+            <p>La DINAF (Dirección Nacional Administrativa Financiera) trabaja en coordinación con el tesorero de la Subdirectiva o respondables del área contable de las Subdirectivas, Iglesias y Congregaciones.</p>
+        </section>
+        
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Describe los servicios que ofreces aquí</p>
+<a href="https://drive.google.com/drive/folders/10aAj-4dXOFz_XNjBQzjxpopvGIrVEC0z">Ir a Tutoriales</a>
+
+        </section>
+        
+        <section id="contacto">
+    <h2>Contacto</h2>
+<p>Comunícate con nosotros, estaremos respondiendo las dudas que tengas.</p>
+    <form id="contactForm" action="#" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required minlength="3" maxlength="50">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Tu email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required minlength="10" maxlength="300"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="formMessage"></p>
+
+    <p>Para más información sobre DINAF y la UCE.<p>
+    <a href="https://www.facebook.com/?locale=es_LA">Facebook</a>
+
+</section>
+        
+        <section id="cursos">
+            <h2>Cursos DINAF</h2>
+            <p>Aquí pienso colocar cursos DINAF.</p>
+        </section>
+
+  <section id="Materiales">
+            <h2>Materiales DINAF</h2>
+            <p>Aquí pienso colocar materiales DINAF.</p>
+        </section>
+
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Mi Página Web</p>
+    </footer>
+<script>
+    let slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    document.querySelector('.prev').addEventListener('click', function() {
+        changeSlide(-1);
+    });
+
+    document.querySelector('.next').addEventListener('click', function() {
+        changeSlide(1);
+    });
+
+    function changeSlide(direction) {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }
+
+    // Iniciar el slider
+    slides[currentIndex].classList.add('active');
+</script>
+<script>
+    let slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    document.querySelector('.prev').addEventListener('click', function() {
+        changeSlide(-1);
+    });
+
+    document.querySelector('.next').addEventListener('click', function() {
+        changeSlide(1);
+    });
+
+    function changeSlide(direction) {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }
+
+    // Iniciar el slider
+    slides[currentIndex].classList.add('active');
+</script>
+</body>
+</html>
